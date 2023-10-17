@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    list-style: none;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*Animated*/
+@keyframes slideInRight{
+    to{transform:translateX(60px)}
+    from{transform:translateX(-560px)}
+}
+
+@keyframes slideInRight-2s{
+    to{transform:translateX(60px)}
+    from{transform:translateX(-560px)}
+}
+
+@keyframes slideInLeft{
+    to{transform:translateX(-60px)}
+    from{transform:translateX(610px)}
+}
+
+@keyframes slideInLeft-2s{
+    to{transform:translateX(-60px)}
+    from{transform:translateX(610px)}
+}
+
+@keyframes slideInDown{
+    from{transform: translateY(-50px);}
+    to{transform:translateY(60px)}
+}
+
+@keyframes fadeInUp{
+    from{opacity:0;transform: translateY(120px);}
+    to{opacity:1;transform:translateY(20px)}
+}
+
+@keyframes fadeInDown{
+    from{opacity:0;transform: translateY(-50px);}
+    to{opacity:1;transform:translateY(0px)}
+}
+
+@keyframes fadeOnPlace{
+    from{opacity:0;transform: translateY(0);}
+    to{opacity:1;transform:translateY(0)}
+}
+
+.animSlideInR{
+    animation-name: slideInRight; 
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;  
+}
+
+.animSlideInR-2s{
+    animation-name: slideInRight-2s; 
+    animation-duration: 2s;
+    animation-fill-mode: forwards;  
+}
+
+.animSlideInL{
+    animation-name: slideInLeft; 
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;  
+}
+.animSlideInL-2s{
+    animation-name: slideInLeft; 
+    animation-duration: 2s;
+    animation-fill-mode: forwards;  
+}
+
+
+.animSlideInD{
+    animation-name: slideInDown;
+    animation-delay: .1s;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.animFadeInUp{
+    animation-name: fadeInUp;
+    animation-delay: .1s;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.animFadeInDown{
+    animation-name: fadeInDown;
+    animation-delay: .1s;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.animfadeOnPlace{
+    animation-name: fadeOnPlace;
+    animation-delay: .1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.zoomOnHover{
+    transition: transform .5s;
+}
+
+.zoomOnHover:hover{
+    transform:scale(1.1);
+}
+
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgb(255, 255, 255);
+    z-index:3;
+    border-width:.5px;
+    box-shadow: 0px 0px 10px black;
+}
+
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header .logo{
+    color: red;
+    font-weight: 500;
+    font-size: 3em;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.dropbtn {
+    background-color: rgb(116, 172, 46);
+    border-width:.5px;
+    box-shadow: 0px 0px 3px rgb(5, 5, 5);
+    color: white;
+    margin-right: 0px;
+    padding:8px 22px;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 3em;
+    font-weight: bold;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 180px;
+    box-shadow: 0 0 3px 0 black;
+    border-radius: 1em;
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+  
+.dropdown-content a:hover {
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+}
+  
+.hovermenu:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
+}
+  
+.hovermenu:hover .dropbtn{
+    background-color: rgba(31, 190, 25, 0.854);
+    transition: .5s;
+}
+
+.dropdown-content a{
+    color: black;
+}
+
+#arDown{
+    width: 16px; 
+    margin-left: 4px;
+    margin-bottom: -1px;
+}
+
+/* Nav Menu Text*/
+header button{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: .9em;
+    font-weight: 600;
+    margin: 0 35px;
+}
+a{
+    text-decoration: none;
+}
+
+/* Nav Menu Text Closing */
+
+#main{
+    background-color: rgb(255, 255, 255);
+    max-height: 100vw;
+    width: 100%;
+}
+#main img{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Main Motorcycle */
+#wp1{
+    margin-top: 12%;
+    width: 49%;
+}
+
+#wp2{
+    width: 49%;
+}
+/* Main Motorcycle Closing */
+
+.btn{
+    display: flex;
+    margin: -125px auto 80px;
+    padding: 20px 75px;
+    background: transparent;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 3em;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.5em;
+    content: '';
+    cursor: pointer;
+}
+
+.btn:hover{
+    transition:.1s;
+    letter-spacing: 0.1em;
+    background:red;
+    color: white;
+}
+.btn a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+/* Brand */
+strong{
+    color: red;
+    font-weight: bolder;
+}
+.heading{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 0;
+    font-size: 3em;
+    color: coral;
+}
+.brand{
+    margin-top: 0;
+}
+.box-container{   
+    display: flex;
+    flex-wrap: wrap;
+    padding:15px 0px;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/* 4 Logo */
+.brandIMG{
+    height:  8rem;
+    margin: 80px  0px 0px 0px;
+}
+/* Brand Close*/
+
+.container1{
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border-width:.5px;
+    box-shadow: 0px 0px 5px rgb(2, 116, 23);
+    border-radius: 2em;
+}
+
+.container2{
+    margin-left: 30px;
+    margin-right: 30px;
+    border-width:.5px;
+    box-shadow: 0px 0px 5px rgb(4, 152, 237);
+    border-radius: 2em;
+}
+
+.container3{
+    margin-left: 30px;
+    margin-right: 30px;
+    border-width:.5px;
+    box-shadow: 0px 0px 5px rgb(124, 4, 245);
+    border-radius: 2em;
+}
+
+.container4{
+    margin-left: 30px;
+    margin-right: 30px;
+    border-width:.5px;
+    box-shadow: 0px 0px 5px rgb(203, 1, 1);
+    border-radius: 2em;
+}
+
+.box2 img{
+    width: 230px;
+    transform: translateY(-10%);
+    float: left;
+}
+
+#brandApriliaDesc{
+    color: black;
+    font-size: 1.2em;
+    text-align: justify;
+}
+#brandYamahaDesc{
+    font-size: 1.2em;
+    text-align: justify;
+}
+#brandDucatiDesc{
+    font-size: 1.2em;
+    text-align: justify;
+}
+#brandHondaDesc{
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+section .container1, .container2, .container4{
+    height: auto;
+    margin-bottom: 30px;
+    padding: 2em;
+}
+
+section .container3{
+    height: auto;
+    margin-bottom: 30px;
+    padding: 2em;
+}
+
+section #brandApriliaDesc,#brandYamahaDesc, #brandDucatiDesc,#brandHondaDesc{
+    margin-left: 275px;
+}
+
+
+.category .box-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+  
+.category .box-container .box{
+    border-radius: 2.5rem;
+    text-align: center;
+    padding:1rem;
+    flex:1 1 25rem;
+    box-shadow: 0px 0px 10px rgb(28, 28, 196);
+}
+.category .box-container .box h3{
+      text-transform: capitalize;
+      font-size: 2em;
+      color:rgb(0, 0, 0);
+      letter-spacing: .05em;
+}
+.category .box-container .box img{
+    width: 25rem;
+    margin-bottom: -60px;
+}
+
+.category .box-container .box .btn{
+    display: block;
+    margin: 40px 30px 0 30px;
+    padding: 10px 35px;
+    border: 1.6px solid rgb(73, 10, 162);
+    border-radius: 3em;
+    color:rgb(0, 0, 0);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.25em;
+    content: '';
+    cursor: pointer;
+}
+#btnApr,#btnDuc{
+    margin: 145px 30px 0 30px;
+}
+#btnYam{
+    margin: 60px 30px 0 30px;
+}
+#btnHon{
+    margin: 118px 30px 0 30px;
+}
+
+.category .box-container .box .btn:hover{
+    transition:.3s;
+    letter-spacing: 0.1em;
+    background:rgba(53, 53, 53, 0.927);
+    color: white;
+}
+
+/* Footer */
+.container{
+	max-width: 2500px;
+	margin:auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer{
+    padding: 30px 50px;
+    background-image: linear-gradient(to right, rgb(9, 9, 99) , rgb(40, 67, 203));
+    border-top-left-radius: 15em;
+    border-bottom-right-radius: 15em;
+}
+
+.footerCol{
+    width: 25%;
+    padding: 20px 80px;
+ }
+
+.footerCol h4{
+	font-size: 20px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative; 
+}
+
+.footerCol h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #fbff00;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footerCol ul li:not(:last-child){
+	margin-bottom: 19px;
+}
+
+.footerCol ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footerCol ul li  a:hover{
+	color: #ffffff;
+	padding-left: 15px;
+}
+
+.footerCol .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255, 255, 255, 0.992);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #000000;
+}
+
+.footerCol .social-links a:hover{
+	color: #24262b;
+	background-color: #969696;
+}    
+
+
+ @media screen and (max-width:990px){ 
+    header ul{
+        display: none;
+    }
+ 
+    #main{
+        margin-bottom: 0;
+        margin-right: 0;
+        width: 100%;
+        min-height: 100vh;
+    }
+    .brandIMG{
+        height:  6rem;
+        margin: 90px 60px 0px 0px;
+    }
+    #wp1{
+        margin-top: 12%;
+        margin-right: 5px;
+        width: 45%;
+    }
+    
+    #wp2{
+        width: 45%;
+        margin-left: 15px;
+    }
+    .btn{
+        display: flex;
+        padding: 20px 75px;
+        background: none;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 3em;
+        color:rgb(255, 255, 255);
+        font-weight: 700;
+        /* letter-spacing: 2px; */
+        text-decoration: none;
+        font-size: 1.5em;
+        content: '';
+        cursor: pointer;
+    }
+    section .container1, .container2, .container3{
+        height: auto;
+        padding: 1em;
+    }
+    section  #brandApriliaDesc{
+        margin-left: 0;
+    }
+    section  #brandYamahaDesc{
+        margin-left: 0;
+    }
+    section  #brandDucatiDesc{
+        margin-left: 0;
+    }
+    section #brandHondaDesc{
+        margin-left: 0;
+    }
+    .category .box-container .box{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+ 
+}
+

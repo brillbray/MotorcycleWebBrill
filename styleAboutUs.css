@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    transition: all .4 linear;
+}
+
+@keyframes fadeInDown{
+    from{opacity:0;transform: translateY(-50px);}
+    to{opacity:1;transform:translateY(0px)}
+}
+
+.animFadeInDown{
+    animation-name: fadeInDown;
+    animation-delay: .1s;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgb(255, 255, 255);
+    z-index:3;
+    border-width:.5px;
+    box-shadow: 0px 0px 10px black;
+}
+
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header .logo{
+    color: red;
+    font-weight: 500;
+    font-size: 3em;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.dropbtn {
+    background-color: rgb(116, 172, 46);
+    border-width:.5px;
+    box-shadow: 0px 0px 3px rgb(5, 5, 5);
+    color: white;
+    margin-right: 0px;
+    padding:8px 22px;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 3em;
+    font-weight: bold;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 180px;
+    box-shadow: 0 0 3px 0 black;
+    border-radius: 1em;
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+  
+.dropdown-content a:hover {
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+}
+  
+.hovermenu:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
+}
+  
+.hovermenu:hover .dropbtn{
+    background-color: rgba(31, 190, 25, 0.854);
+    transition: .5s;
+}
+
+.dropdown-content a{
+    color: black;
+}
+
+#arDown{
+    width: 16px; 
+    margin-left: 4px;
+    margin-bottom: -1px;
+}
+
+/* Nav Menu Text*/
+header button{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: .9em;
+    font-weight: 600;
+    margin: 0 35px;
+}
+a{
+    text-decoration: none;
+}
+
+.heading{
+    text-align: center;
+    text-transform:uppercase;
+    margin-top: 4em;
+    margin-bottom: 1em;
+    font-size: 3em;
+    color: red;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+}
+.aboutUs{
+    text-align: center;
+    margin-left: 10em;
+    margin-right: 10em;
+    font-size: 1.5em;
+}
+
+.box-img{
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-img #fb {
+    width: 90px;
+    margin-top: 2em;
+}
+.box-img #ig {
+    width: 110px;
+    margin-top: 2em;
+    margin-left: 14em;
+}
+span{
+    margin: 3em;
+    margin-left: 12px;
+    margin-top: 5em;
+}
+#igSpan{
+    position: relative;
+    margin-right: 310px;
+    margin-top: 5em;
+}
+@media screen and (max-width:990px){ 
+    header ul{
+        display: none;
+    }
+    .burger{
+        position: relative;
+        margin-right: 1px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background: url(burgerMenu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        z-index: 3;   
+    } 
+    .heading{
+        font-size: 2em;
+    }
+    .aboutUs{
+        text-align: center;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+}
